@@ -36,7 +36,7 @@ namespace Business.Concrete
 
         public IDataResult<Category> GetById(int categoryId)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<Category>(_categoryDal.Get(c=>c.CategoryId==categoryId));
         }
 
         public IResult Update(Category category)
